@@ -6,6 +6,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    footer {
+        margin-top: auto;
+    }
+</style>
   </head>
   <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,16 +43,60 @@
       </div>
     </nav>
     <div class="container mt-4">{% block content %} {% endblock %}</div>
-    <div class="bg-dark text-white text-center py-3">
-      <div class="container">
-        <span class="fw-bold">Made with Love &#10084;</span> |
-        <a
-          href="{% url 'grievance_list' %}"
-          class="text-white text-decoration-none"
-        >
-          Grievance List
-        </a>
-      </div>
-    </div>
-  </body>
+    </div> 
+
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">🏛️ CivicConnect</h5>
+                    <p>
+                        Empowering citizens to report issues and track resolutions in real-time. 
+                        Together, let's build a cleaner and safer community.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p>
+                        <a href="{% url 'grievance_list' %}" class="text-white text-decoration-none">Dashboard</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'grievance_create' %}" class="text-white text-decoration-none">Lodge Complaint</a>
+                    </p>
+                    <p>
+                        <a href="/admin/" class="text-white text-decoration-none">Admin Login</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h5>
+                    <p>
+                        🏠 Municipal Corporation
+                    </p>
+                    <p>
+                        📧 support@civicconnect.in
+                    </p>
+                    <p>
+                        📞 +91 1800-123-4567 (Toll Free)
+                    </p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p> Copyright © 2025 All rights reserved by:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-warning">Bhuwan</strong>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
 </html>
